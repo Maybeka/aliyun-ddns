@@ -1,0 +1,24 @@
+{
+      "AccessKeyId"         : "Your-Access-Key-Id"
+    , "AccessKeySecret"     : "Your-Access-Key-Secret"
+
+    , "First-level-domain"  : "Your-First-level-domain"
+    , "Second-level-domains": ["Your-Second-level-domain0", "Your-Second-level-domain1", "Your-Second-level-domain2"]
+
+    , "Your-Second-level-domain0-Record-Type"   : "AAAA"
+    , "Your-Second-level-domain0-IP-Command"    : "ifconfig br0 | egrep 'xxxx:xxxx:.*:.*:.*:.*:.*:.*global.*' | awk '{print $2}'"
+    , "Your-Second-level-domain1-Record-Type"      : "AAAA"
+    , "Your-Second-level-domain1-IP-Command"       : "ssh xn@xx.xx.xx.xx ifconfig en0 | grep xxxx:xxxx | awk '{print $2}'"
+    , "Your-Second-level-domain2-Record-Type": "AAAA"
+    , "Your-Second-level-domain2-IP-Command" : "docker exec `docker container ls | grep Your-Second-level-domain2 | awk '{print $1}'` ifconfig eth0 | egrep 'xxxx:xxxx:.*:.*:.*:.*:.*:.*' | awk '{print $3}' | sed 's/\\/.*//'"
+    
+    , "Reference-Webpage": "https://help.aliyun.com/document_detail/29774.html?spm=a2c4g.11186623.6.677.b1a437acNdeOkp"
+
+    , "Update-DNS-Period" : 300
+    , "Update-Cfg-Period" : 30
+    , "Fast-NetChk-Num"   : 10
+    , "Network-Check-Num" : 20
+    , "Fast-NetChk-Period": 10
+    , "Net-Check-Period"  : 600
+    , "Debug-Mode"        : false
+}
